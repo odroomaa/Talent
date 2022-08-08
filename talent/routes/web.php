@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('layouts.master');});
+
+Route::get('/relog', function () {return view('relog');});
+
+Route::get('/show', function () {return view('hanze/show');});
+
+Route::get('/index', function () {return view('hanze/index');});
+
+Route::get('/upload', function () {return view('upload');});
+
+//Route::resource('posts',PostController::class);
